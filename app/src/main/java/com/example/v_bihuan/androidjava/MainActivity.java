@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         Push.setSenderId("243527024264"); //+
         AppCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es"); //+
         AppCenter.start(getApplication(), "574dae69-3d0f-46ab-8f72-35424dd4901a",
-                Analytics.class, Crashes.class, Push.class);
+                Analytics.class, Crashes.class);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
