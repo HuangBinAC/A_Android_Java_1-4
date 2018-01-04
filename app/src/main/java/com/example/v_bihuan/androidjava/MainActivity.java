@@ -159,7 +159,8 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Analytics.trackEvent("Video clicked"); //+
-            Crashes.generateTestCrash(); //+
+//            Crashes.generateTestCrash(); //+
+            int i = 5/0;
             return true;
         }
 
