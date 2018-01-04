@@ -21,12 +21,10 @@ import android.widget.TextView;
 import com.microsoft.appcenter.AppCenter;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.push.Push;
 import com.microsoft.appcenter.crashes.CrashesListener;
 import com.microsoft.appcenter.crashes.ingestion.models.ErrorAttachmentLog;
 import com.microsoft.appcenter.crashes.model.ErrorReport;
-
-import com.microsoft.appcenter.AppCenter;
-import com.microsoft.appcenter.push.Push;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Arrays;
@@ -57,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         Push.setSenderId("243527024264"); //+
         AppCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es"); //+
         AppCenter.start(getApplication(), "a95e8d4f-03bd-4e5f-90d7-6f8643c10837",
-                Analytics.class, Crashes.class);
+                Analytics.class, Crashes.class, Push.class);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
