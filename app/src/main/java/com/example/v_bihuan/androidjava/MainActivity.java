@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Push.setListener(new MyPushListener());
         Push.setSenderId("243527024264"); //+
 
-        AppCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
+//        AppCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
         AppCenter.start(getApplication(), "32b132f7-ea6e-4066-8c4d-c75325678d06",
                 Analytics.class, Crashes.class, Push.class);
 
