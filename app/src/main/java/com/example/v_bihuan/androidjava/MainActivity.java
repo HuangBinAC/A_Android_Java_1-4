@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.distribute.Distribute;
 import com.microsoft.appcenter.analytics.Analytics;
 import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.appcenter.push.Push;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        AppCenter.setLogUrl("https://in-staging-south-centralus.staging.avalanch.es");
         AppCenter.start(getApplication(), "aa37a457-cf4b-4e2e-81b6-489d1207f820",
-                Analytics.class, Crashes.class, Push.class);
+                Distribute.class, Analytics.class, Crashes.class, Push.class);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);

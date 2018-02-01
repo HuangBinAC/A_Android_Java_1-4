@@ -33,9 +33,11 @@ dependencies {
     compile 'com.android.support:design:26.+'
     testCompile 'junit:junit:4.12'
 
-    def appCenterSdkVersion = '1.1.0'
+
+
+    def appCenterSdkVersion = '1.2.0'
+    compile "com.microsoft.appcenter:appcenter-distribute:${appCenterSdkVersion}"
     compile "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
     compile "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-
-    compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}" //+push
+    compile "com.microsoft.appcenter:appcenter-push:${appCenterSdkVersion}"
 }
