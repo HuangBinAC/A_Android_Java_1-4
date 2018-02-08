@@ -29,12 +29,6 @@
         android:paddingTop="@dimen/appbar_padding_top"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <Button
-            android:id="@+id/analytics"
-            android:layout_width="78dp"
-            android:layout_height="36dp"
-            android:text="Analytics" />
-
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -50,6 +44,12 @@
             android:layout_width="78dp"
             android:layout_height="36dp"
             android:text="Crash" />
+
+        <Button
+            android:id="@+id/analytics"
+            android:layout_width="78dp"
+            android:layout_height="36dp"
+            android:text="Analytics" />
 
     </android.support.design.widget.AppBarLayout>
 

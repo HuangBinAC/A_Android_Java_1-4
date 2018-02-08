@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Push.setListener(new MyPushListener());
@@ -86,27 +88,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout layout = (LinearLayout) findViewById(R.id.crash);
-
-        Button bn = new Button(this);
-        bn.setText("点击");
-        bn.setLayoutParams(new ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT));
-
-        layout.addView(bn);
-
-        bn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                ComponentName comp = new ComponentName(MainActivity.this, MainActivity.class);
-                Intent intent = new Intent();
-                intent.setComponent(comp);
-                startActivity(intent);
-                Crashes.notifyUserConfirmation(Crashes.SEND); //+
-            }
-        });
+//        LinearLayout layout = (LinearLayout) findViewById(R.id.crash);
+//
+//        Button bn = new Button(this);
+//        bn.setText("点击");
+//        bn.setLayoutParams(new ViewGroup.LayoutParams(
+//                ViewGroup.LayoutParams.WRAP_CONTENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT));
+//
+//        layout.addView(bn);
+//
+//        bn.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View arg0) {
+//                ComponentName comp = new ComponentName(MainActivity.this, MainActivity.class);
+//                Intent intent = new Intent();
+//                intent.setComponent(comp);
+//                startActivity(intent);
+//                Crashes.notifyUserConfirmation(Crashes.SEND); //+
+//            }
+//        });
 
 
 
@@ -165,6 +167,37 @@ public class MainActivity extends AppCompatActivity {
         Crashes.setListener(customListener); //+
 
     }
+
+//    private Button btnAnalytics,btnCrash;
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main);
+//        btnAnalytics = (Button) findViewById(R.id.analytics);
+//        btnCrash = (Button) findViewById(R.id.crash);
+//        btnCrash.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(btnTwo.getText().toString().equals("按钮不可用")){
+//                    btnOne.setEnabled(false);
+//                    btnTwo.setText("按钮可用");
+//                }else{
+//                    btnOne.setEnabled(true);
+//                    btnTwo.setText("按钮不可用");
+//                }
+//            }
+//            Crashes.notifyUserConfirmation(Crashes.SEND);
+//        });
+////        btnAnalytics.setOnClickListener(new View.OnClickListener() {
+////
+////            @Override
+////            public void onClick(View v) {
+////
+////            }
+////        });
+//
+//    }
 
 
     @Override
