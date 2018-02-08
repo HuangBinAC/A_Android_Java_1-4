@@ -32,7 +32,7 @@
         <Button
             android:id="@+id/analytics"
             android:layout_width="78dp"
-            android:layout_height="34dp"
+            android:layout_height="36dp"
             android:text="Analytics" />
 
         <android.support.v7.widget.Toolbar

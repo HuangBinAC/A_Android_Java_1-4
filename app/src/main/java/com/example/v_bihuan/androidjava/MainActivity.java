@@ -1,5 +1,7 @@
 package com.example.v_bihuan.androidjava;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -16,6 +18,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.microsoft.appcenter.AppCenter;
@@ -82,6 +86,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        LinearLayout layout = (LinearLayout) findViewById(R.id.crash);
+
+        Button bn = new Button(this);
+        bn.setText("点击");
+        bn.setLayoutParams(new ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT));
+
+        layout.addView(bn);
+
+        bn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                ComponentName comp = new ComponentName(MainActivity.this, MainActivity.class);
+                Intent intent = new Intent();
+                intent.setComponent(comp);
+                startActivity(intent);
+                Crashes.notifyUserConfirmation(Crashes.SEND); //+
+            }
+        });
+
+
+
         // CrashesListener //+
         CrashesListener customListener = new CrashesListener() {
             // Implement all callbacks here.
@@ -97,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                 // Build your own UI to ask for user consent here. SDK does not provide one by default.
 
                 // Return true if you just built a UI for user consent and are waiting for user input on that custom UI, otherwise false.
-                Crashes.notifyUserConfirmation(Crashes.SEND); //+
+
                 return true;
 
             }
