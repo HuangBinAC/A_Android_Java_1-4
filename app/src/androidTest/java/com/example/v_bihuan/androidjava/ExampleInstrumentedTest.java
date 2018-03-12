@@ -11,8 +11,6 @@ import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-
 /**
  * Instrumentation test, which will execute on an Android device.
  *
