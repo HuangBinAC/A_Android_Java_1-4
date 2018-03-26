@@ -77,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
+        //event code
+        Map<String, String> properties = new HashMap<>();
+        properties.put("Category", "Music");
+        properties.put("FileName", "favorite.avi");
+
+        Analytics.trackEvent("Video clicked", properties);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
